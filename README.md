@@ -1,2 +1,21 @@
-# What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+# Solar 3D Lab
+
+เว็บไซต์ 3D แบบให้ความรู้เกี่ยวกับดาวเคราะห์ทั้ง 8 ดวงในระบบสุริยะ สร้างด้วย HTML, CSS และ JavaScript ล้วน เหมาะสำหรับเปิดใช้งานเป็นหน้าเว็บแบบ Static Site
+
+## จุดเด่น
+
+- ฮีโร่และโมเดลระบบสุริยะสไตล์ 3D ด้วย CSS transforms
+- ปุ่มเลือกดาวเคราะห์แบบอินเทอร์แอ็กทีฟ พร้อมข้อมูลภาษาไทย
+- การ์ดความรู้ของดาวพุธ ดาวศุกร์ โลก ดาวอังคาร ดาวพฤหัสบดี ดาวเสาร์ ดาวยูเรนัส และดาวเนปจูน
+- ส่วนเปรียบเทียบดาวเคราะห์หินกับดาวเคราะห์ยักษ์
+- รองรับหน้าจอมือถือและผู้ใช้ที่ลด motion ผ่าน `prefers-reduced-motion`
+
+## วิธีเปิดดู
+
+เปิดไฟล์ `index.html` ในเบราว์เซอร์โดยตรง หรือรันเว็บเซิร์ฟเวอร์แบบง่าย:
+
+```bash
+python3 -m http.server 8000
+```
+
+จากนั้นเข้าไปที่ `http://localhost:8000`

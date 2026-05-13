@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="เว็บไซต์ 3D ภาษาไทยสำหรับเรียนรู้ดาวเคราะห์ทั้ง 8 ดวงในระบบสุริยะ"
+    />
+    <title>สำรวจดาวเคราะห์ทั้ง 8 ดวง | 3D Solar Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a class="logo" href="#top" aria-label="กลับสู่ด้านบน">
+          <span class="logo-orbit" aria-hidden="true"></span>
+          Solar 3D Lab
+        </a>
+        <div class="nav-links">
+          <a href="#orbit-lab">โมเดล 3D</a>
+          <a href="#planet-guide">ข้อมูลดาวเคราะห์</a>
+          <a href="#comparison">เปรียบเทียบ</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">เรียนรู้ดาราศาสตร์แบบอินเทอร์แอ็กทีฟ</p>
+          <h1>ท่องระบบสุริยะผ่านเว็บไซต์ 3D</h1>
+          <p class="hero-text">
+            หมุนดูดาวเคราะห์ทั้ง 8 ดวง สำรวจวงโคจร ระยะห่าง จุดเด่น และข้อเท็จจริงสำคัญ
+            ในรูปแบบภาษาไทยที่เข้าใจง่าย เหมาะสำหรับนักเรียนและผู้เริ่มต้นเรียนดาราศาสตร์
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#orbit-lab">เริ่มสำรวจ</a>
+            <a class="button secondary" href="#planet-guide">อ่านข้อมูล</a>
+          </div>
+        </div>
+
+        <div class="hero-stage" aria-label="ภาพจำลองระบบสุริยะสามมิติ">
+          <div class="cosmic-card">
+            <div class="sun-large" aria-hidden="true"></div>
+            <div class="tilted-orbits" aria-hidden="true">
+              <span class="ring ring-1"></span>
+              <span class="ring ring-2"></span>
+              <span class="ring ring-3"></span>
+              <span class="ring ring-4"></span>
+              <span class="mini-planet mercury"></span>
+              <span class="mini-planet venus"></span>
+              <span class="mini-planet earth"></span>
+              <span class="mini-planet mars"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section orbit-section" id="orbit-lab">
+        <div class="section-heading">
+          <p class="eyebrow">3D Orbit Lab</p>
+          <h2>เลือกดาวเคราะห์เพื่อดูข้อมูล</h2>
+          <p>
+            คลิกปุ่มชื่อดาวเคราะห์หรือการ์ดด้านล่าง ระบบจะไฮไลต์ดาวดวงนั้นพร้อมแสดงข้อมูลสำคัญทันที
+          </p>
+        </div>
+
+        <div class="lab-layout">
+          <div class="solar-system" aria-label="โมเดลระบบสุริยะสามมิติ">
+            <div class="system-plane">
+              <button class="planet sun-core" type="button" data-planet="sun" aria-label="ดวงอาทิตย์"></button>
+              <button class="planet mercury-orbit" type="button" data-planet="mercury" aria-label="ดาวพุธ"></button>
+              <button class="planet venus-orbit" type="button" data-planet="venus" aria-label="ดาวศุกร์"></button>
+              <button class="planet earth-orbit" type="button" data-planet="earth" aria-label="โลก"></button>
+              <button class="planet mars-orbit" type="button" data-planet="mars" aria-label="ดาวอังคาร"></button>
+              <button class="planet jupiter-orbit" type="button" data-planet="jupiter" aria-label="ดาวพฤหัสบดี"></button>
+              <button class="planet saturn-orbit" type="button" data-planet="saturn" aria-label="ดาวเสาร์"></button>
+              <button class="planet uranus-orbit" type="button" data-planet="uranus" aria-label="ดาวยูเรนัส"></button>
+              <button class="planet neptune-orbit" type="button" data-planet="neptune" aria-label="ดาวเนปจูน"></button>
+            </div>
+          </div>
+
+          <article class="planet-panel" aria-live="polite">
+            <p class="panel-label" id="selected-category">ดาวเคราะห์วงใน</p>
+            <h3 id="selected-name">โลก</h3>
+            <p id="selected-summary">
+              ดาวเคราะห์หินที่มีน้ำในสถานะของเหลวบนพื้นผิวจำนวนมาก และเป็นบ้านของสิ่งมีชีวิตเท่าที่เรารู้จัก
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>ลำดับจากดวงอาทิตย์</dt>
+                <dd id="selected-order">3</dd>
+              </div>
+              <div>
+                <dt>เวลาหมุนรอบตัวเอง</dt>
+                <dd id="selected-day">ประมาณ 24 ชั่วโมง</dd>
+              </div>
+              <div>
+                <dt>เวลารอบดวงอาทิตย์</dt>
+                <dd id="selected-year">365.25 วัน</dd>
+              </div>
+              <div>
+                <dt>จุดเด่น</dt>
+                <dd id="selected-highlight">มีชั้นบรรยากาศและสนามแม่เหล็กช่วยปกป้องสิ่งมีชีวิต</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="planet-tabs" aria-label="เลือกดาวเคราะห์">
+          <button class="tab" type="button" data-planet="mercury">ดาวพุธ</button>
+          <button class="tab" type="button" data-planet="venus">ดาวศุกร์</button>
+          <button class="tab active" type="button" data-planet="earth">โลก</button>
+          <button class="tab" type="button" data-planet="mars">ดาวอังคาร</button>
+          <button class="tab" type="button" data-planet="jupiter">ดาวพฤหัสบดี</button>
+          <button class="tab" type="button" data-planet="saturn">ดาวเสาร์</button>
+          <button class="tab" type="button" data-planet="uranus">ดาวยูเรนัส</button>
+          <button class="tab" type="button" data-planet="neptune">ดาวเนปจูน</button>
+        </div>
+      </section>
+
+      <section class="section" id="planet-guide">
+        <div class="section-heading">
+          <p class="eyebrow">Planet Guide</p>
+          <h2>คู่มือดาวเคราะห์ทั้ง 8 ดวง</h2>
+          <p>สรุปเนื้อหาแบบย่อยง่าย แยกดาวเคราะห์หินและดาวเคราะห์ยักษ์เพื่อให้จดจำภาพรวมได้รวดเร็ว</p>
+        </div>
+
+        <div class="planet-grid">
+          <article class="planet-card" data-planet="mercury" role="button" tabindex="0">
+            <span class="planet-icon mercury-icon"></span>
+            <h3>ดาวพุธ</h3>
+            <p>เล็กที่สุดและอยู่ใกล้ดวงอาทิตย์ที่สุด กลางวันร้อนจัด กลางคืนเย็นจัด เพราะแทบไม่มีบรรยากาศหนาแน่น</p>
+          </article>
+          <article class="planet-card" data-planet="venus" role="button" tabindex="0">
+            <span class="planet-icon venus-icon"></span>
+            <h3>ดาวศุกร์</h3>
+            <p>มีเมฆกรดซัลฟิวริกและบรรยากาศคาร์บอนไดออกไซด์หนาแน่น ทำให้เกิดภาวะเรือนกระจกรุนแรง</p>
+          </article>
+          <article class="planet-card" data-planet="earth" role="button" tabindex="0">
+            <span class="planet-icon earth-icon"></span>
+            <h3>โลก</h3>
+            <p>ดาวเคราะห์ที่มีมหาสมุทร บรรยากาศเหมาะสม และระบบนิเวศหลากหลาย เป็นฐานเปรียบเทียบของการค้นหาชีวิต</p>
+          </article>
+          <article class="planet-card" data-planet="mars" role="button" tabindex="0">
+            <span class="planet-icon mars-icon"></span>
+            <h3>ดาวอังคาร</h3>
+            <p>ดาวสีแดงจากออกไซด์ของเหล็ก มีภูเขาไฟโอลิมปัสมอนส์และหลักฐานว่าครั้งหนึ่งเคยมีน้ำไหลบนพื้นผิว</p>
+          </article>
+          <article class="planet-card" data-planet="jupiter" role="button" tabindex="0">
+            <span class="planet-icon jupiter-icon"></span>
+            <h3>ดาวพฤหัสบดี</h3>
+            <p>ดาวเคราะห์ใหญ่ที่สุด เป็นดาวแก๊สยักษ์ มีจุดแดงใหญ่ซึ่งเป็นพายุขนาดมหึมาและมีดวงจันทร์จำนวนมาก</p>
+          </article>
+          <article class="planet-card" data-planet="saturn" role="button" tabindex="0">
+            <span class="planet-icon saturn-icon"></span>
+            <h3>ดาวเสาร์</h3>
+            <p>โดดเด่นด้วยวงแหวนกว้างที่ประกอบด้วยน้ำแข็งและเศษหิน มีดวงจันทร์ไททันที่มีบรรยากาศหนาแน่น</p>
+          </article>
+          <article class="planet-card" data-planet="uranus" role="button" tabindex="0">
+            <span class="planet-icon uranus-icon"></span>
+            <h3>ดาวยูเรนัส</h3>
+            <p>ดาวน้ำแข็งยักษ์ที่แกนเอียงมากจนเหมือนกลิ้งไปรอบดวงอาทิตย์ สีฟ้าเขียวเกิดจากมีเทนในบรรยากาศ</p>
+          </article>
+          <article class="planet-card" data-planet="neptune" role="button" tabindex="0">
+            <span class="planet-icon neptune-icon"></span>
+            <h3>ดาวเนปจูน</h3>
+            <p>อยู่ไกลที่สุดในกลุ่มดาวเคราะห์หลัก มีลมแรงมากและสีฟ้าเข้มจากมีเทนกับองค์ประกอบในชั้นบรรยากาศ</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section comparison" id="comparison">
+        <div class="section-heading">
+          <p class="eyebrow">Quick Comparison</p>
+          <h2>จำแนกดาวเคราะห์แบบรวดเร็ว</h2>
+        </div>
+        <div class="comparison-grid">
+          <article>
+            <h3>ดาวเคราะห์หิน</h3>
+            <p>ดาวพุธ ดาวศุกร์ โลก และดาวอังคาร มีพื้นผิวแข็ง อยู่ใกล้ดวงอาทิตย์ และมีขนาดเล็กกว่า</p>
+          </article>
+          <article>
+            <h3>ดาวเคราะห์ยักษ์</h3>
+            <p>ดาวพฤหัสบดี ดาวเสาร์ ดาวยูเรนัส และดาวเนปจูน มีขนาดใหญ่ อยู่ไกลกว่า และประกอบด้วยแก๊สหรือน้ำแข็งเป็นหลัก</p>
+          </article>
+          <article>
+            <h3>เกร็ดน่ารู้</h3>
+            <p>ระบบสุริยะไม่ได้มีแค่ดาวเคราะห์ แต่ยังมีดาวเคราะห์แคระ ดาวเคราะห์น้อย ดาวหาง ดวงจันทร์ และฝุ่นอวกาศอีกมาก</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>สร้างเพื่อการเรียนรู้: สำรวจ ตั้งคำถาม และเชื่อมโยงข้อมูลทางวิทยาศาสตร์กับภาพจำลอง 3D</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
